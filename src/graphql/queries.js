@@ -12,6 +12,7 @@ export const getDepartment = /* GraphQL */ `
         age
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
@@ -36,6 +37,7 @@ export const listDepartments = /* GraphQL */ `
           age
           createdAt
           updatedAt
+          owner
         }
         createdAt
         updatedAt
@@ -54,6 +56,7 @@ export const getEmployee = /* GraphQL */ `
       age
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -70,6 +73,67 @@ export const listEmployees = /* GraphQL */ `
         age
         createdAt
         updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;
+export const getProject = /* GraphQL */ `
+  query GetProject($id: ID!) {
+    getProject(id: $id) {
+      id
+      name
+      desc
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listProjects = /* GraphQL */ `
+  query ListProjects(
+    $filter: ModelProjectFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        desc
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;
+export const getCity = /* GraphQL */ `
+  query GetCity($id: ID!) {
+    getCity(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listCities = /* GraphQL */ `
+  query ListCities(
+    $filter: ModelCityFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCities(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        createdAt
+        updatedAt
+        owner
       }
       nextToken
     }

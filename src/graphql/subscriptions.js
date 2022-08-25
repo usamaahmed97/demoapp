@@ -2,8 +2,10 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateDepartment = /* GraphQL */ `
-  subscription OnCreateDepartment {
-    onCreateDepartment {
+  subscription OnCreateDepartment(
+    $filter: ModelSubscriptionDepartmentFilterInput
+  ) {
+    onCreateDepartment(filter: $filter) {
       id
       name
       manager {
@@ -12,6 +14,7 @@ export const onCreateDepartment = /* GraphQL */ `
         age
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
@@ -21,8 +24,10 @@ export const onCreateDepartment = /* GraphQL */ `
   }
 `;
 export const onUpdateDepartment = /* GraphQL */ `
-  subscription OnUpdateDepartment {
-    onUpdateDepartment {
+  subscription OnUpdateDepartment(
+    $filter: ModelSubscriptionDepartmentFilterInput
+  ) {
+    onUpdateDepartment(filter: $filter) {
       id
       name
       manager {
@@ -31,6 +36,7 @@ export const onUpdateDepartment = /* GraphQL */ `
         age
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
@@ -40,8 +46,10 @@ export const onUpdateDepartment = /* GraphQL */ `
   }
 `;
 export const onDeleteDepartment = /* GraphQL */ `
-  subscription OnDeleteDepartment {
-    onDeleteDepartment {
+  subscription OnDeleteDepartment(
+    $filter: ModelSubscriptionDepartmentFilterInput
+  ) {
+    onDeleteDepartment(filter: $filter) {
       id
       name
       manager {
@@ -50,6 +58,7 @@ export const onDeleteDepartment = /* GraphQL */ `
         age
         createdAt
         updatedAt
+        owner
       }
       createdAt
       updatedAt
@@ -66,6 +75,7 @@ export const onCreateEmployee = /* GraphQL */ `
       age
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -77,6 +87,7 @@ export const onUpdateEmployee = /* GraphQL */ `
       age
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -88,6 +99,76 @@ export const onDeleteEmployee = /* GraphQL */ `
       age
       createdAt
       updatedAt
+      owner
+    }
+  }
+`;
+export const onCreateProject = /* GraphQL */ `
+  subscription OnCreateProject($filter: ModelSubscriptionProjectFilterInput) {
+    onCreateProject(filter: $filter) {
+      id
+      name
+      desc
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateProject = /* GraphQL */ `
+  subscription OnUpdateProject($filter: ModelSubscriptionProjectFilterInput) {
+    onUpdateProject(filter: $filter) {
+      id
+      name
+      desc
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteProject = /* GraphQL */ `
+  subscription OnDeleteProject($filter: ModelSubscriptionProjectFilterInput) {
+    onDeleteProject(filter: $filter) {
+      id
+      name
+      desc
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onCreateCity = /* GraphQL */ `
+  subscription OnCreateCity($filter: ModelSubscriptionCityFilterInput) {
+    onCreateCity(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateCity = /* GraphQL */ `
+  subscription OnUpdateCity($filter: ModelSubscriptionCityFilterInput) {
+    onUpdateCity(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteCity = /* GraphQL */ `
+  subscription OnDeleteCity($filter: ModelSubscriptionCityFilterInput) {
+    onDeleteCity(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
     }
   }
 `;
