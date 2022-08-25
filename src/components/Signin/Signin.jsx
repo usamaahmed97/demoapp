@@ -52,48 +52,39 @@ function Signin() {
       }}
     >
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h1 class="flex items-center justify-center">Login</h1>
+
         <div className="mb-6">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="email"
-          >
-            Username
-          </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
+            id="username"
             type="text"
-            placeholder="Enter Email"
+            placeholder="Enter Username"
             value={user.username}
             onChange={(e) => handleInputChange(e, "username")}
           />
         </div>
 
         <div className="mb-6">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="password"
-          >
-            Password
-          </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
-            placeholder="******************"
+            placeholder="Enter Password"
             value={user.password}
             onChange={(e) => handleInputChange(e, "password")}
           />
         </div>
         <div className="flex items-center justify-center">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="w-100 btn btn-lg btn-primary"
             type="button"
             onClick={logIn}
           >
             Log In
           </button>
         </div>
+
         <div className="w-full">
           <p
             className="text-gray-700 pb-2 pt-2 text-sm mt-3"

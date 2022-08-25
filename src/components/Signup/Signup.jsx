@@ -45,14 +45,9 @@ const Signup = () => {
         className="w-full max-w-xs"
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+          <h1 class="flex items-center justify-center">Sign Up</h1>
           <div className="mb-6">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="password"
-            >
-              Email
-            </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
@@ -64,52 +59,38 @@ const Signup = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="username"
-            >
-              Username
-            </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               name="username"
               id="username"
               type="text"
-              placeholder="Username"
+              placeholder="Enter Username"
               value={user.username}
               onChange={(e) => handleInputChange(e, "username")}
             />
           </div>
           <div className="mb-6">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="password"
-            >
-              Password
-            </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
-              placeholder="******************"
+              placeholder="Enter Password"
               value={user.password}
               onChange={(e) => handleInputChange(e, "password")}
             />
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="w-100 btn btn-lg btn-primary"
               type="button"
               onClick={() => signUp()}
             >
               Sign Up
             </button>
-            <a
+            <Link
               className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              href="/"
-            >
-              Forgot Password?
-            </a>
+              to="/"
+            ></Link>
           </div>
           <div className="w-full">
             <p
