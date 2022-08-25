@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "demoapp1cad5ecf": {}
+        "demoapp1cad5ecf": {},
+        "userPoolGroups": {}
       },
       "function": {
         "AdminQueriesf2f10f25": {
