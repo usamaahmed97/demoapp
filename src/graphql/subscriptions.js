@@ -2,10 +2,8 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateDepartment = /* GraphQL */ `
-  subscription OnCreateDepartment(
-    $filter: ModelSubscriptionDepartmentFilterInput
-  ) {
-    onCreateDepartment(filter: $filter) {
+  subscription OnCreateDepartment {
+    onCreateDepartment {
       id
       name
       manager {
@@ -24,10 +22,8 @@ export const onCreateDepartment = /* GraphQL */ `
   }
 `;
 export const onUpdateDepartment = /* GraphQL */ `
-  subscription OnUpdateDepartment(
-    $filter: ModelSubscriptionDepartmentFilterInput
-  ) {
-    onUpdateDepartment(filter: $filter) {
+  subscription OnUpdateDepartment {
+    onUpdateDepartment {
       id
       name
       manager {
@@ -46,10 +42,8 @@ export const onUpdateDepartment = /* GraphQL */ `
   }
 `;
 export const onDeleteDepartment = /* GraphQL */ `
-  subscription OnDeleteDepartment(
-    $filter: ModelSubscriptionDepartmentFilterInput
-  ) {
-    onDeleteDepartment(filter: $filter) {
+  subscription OnDeleteDepartment {
+    onDeleteDepartment {
       id
       name
       manager {
@@ -68,8 +62,8 @@ export const onDeleteDepartment = /* GraphQL */ `
   }
 `;
 export const onCreateEmployee = /* GraphQL */ `
-  subscription OnCreateEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
-    onCreateEmployee(filter: $filter) {
+  subscription OnCreateEmployee {
+    onCreateEmployee {
       id
       name
       age
@@ -80,8 +74,8 @@ export const onCreateEmployee = /* GraphQL */ `
   }
 `;
 export const onUpdateEmployee = /* GraphQL */ `
-  subscription OnUpdateEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
-    onUpdateEmployee(filter: $filter) {
+  subscription OnUpdateEmployee {
+    onUpdateEmployee {
       id
       name
       age
@@ -92,8 +86,8 @@ export const onUpdateEmployee = /* GraphQL */ `
   }
 `;
 export const onDeleteEmployee = /* GraphQL */ `
-  subscription OnDeleteEmployee($filter: ModelSubscriptionEmployeeFilterInput) {
-    onDeleteEmployee(filter: $filter) {
+  subscription OnDeleteEmployee {
+    onDeleteEmployee {
       id
       name
       age
@@ -104,8 +98,8 @@ export const onDeleteEmployee = /* GraphQL */ `
   }
 `;
 export const onCreateProject = /* GraphQL */ `
-  subscription OnCreateProject($filter: ModelSubscriptionProjectFilterInput) {
-    onCreateProject(filter: $filter) {
+  subscription OnCreateProject {
+    onCreateProject {
       id
       name
       desc
@@ -116,8 +110,8 @@ export const onCreateProject = /* GraphQL */ `
   }
 `;
 export const onUpdateProject = /* GraphQL */ `
-  subscription OnUpdateProject($filter: ModelSubscriptionProjectFilterInput) {
-    onUpdateProject(filter: $filter) {
+  subscription OnUpdateProject {
+    onUpdateProject {
       id
       name
       desc
@@ -128,8 +122,8 @@ export const onUpdateProject = /* GraphQL */ `
   }
 `;
 export const onDeleteProject = /* GraphQL */ `
-  subscription OnDeleteProject($filter: ModelSubscriptionProjectFilterInput) {
-    onDeleteProject(filter: $filter) {
+  subscription OnDeleteProject {
+    onDeleteProject {
       id
       name
       desc
@@ -140,8 +134,8 @@ export const onDeleteProject = /* GraphQL */ `
   }
 `;
 export const onCreateCity = /* GraphQL */ `
-  subscription OnCreateCity($filter: ModelSubscriptionCityFilterInput) {
-    onCreateCity(filter: $filter) {
+  subscription OnCreateCity {
+    onCreateCity {
       id
       name
       createdAt
@@ -151,8 +145,8 @@ export const onCreateCity = /* GraphQL */ `
   }
 `;
 export const onUpdateCity = /* GraphQL */ `
-  subscription OnUpdateCity($filter: ModelSubscriptionCityFilterInput) {
-    onUpdateCity(filter: $filter) {
+  subscription OnUpdateCity {
+    onUpdateCity {
       id
       name
       createdAt
@@ -162,8 +156,41 @@ export const onUpdateCity = /* GraphQL */ `
   }
 `;
 export const onDeleteCity = /* GraphQL */ `
-  subscription OnDeleteCity($filter: ModelSubscriptionCityFilterInput) {
-    onDeleteCity(filter: $filter) {
+  subscription OnDeleteCity {
+    onDeleteCity {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onCreateCountry = /* GraphQL */ `
+  subscription OnCreateCountry {
+    onCreateCountry {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateCountry = /* GraphQL */ `
+  subscription OnUpdateCountry {
+    onUpdateCountry {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteCountry = /* GraphQL */ `
+  subscription OnDeleteCountry {
+    onDeleteCountry {
       id
       name
       createdAt
