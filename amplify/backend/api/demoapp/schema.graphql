@@ -12,7 +12,7 @@ type Department
 }
 
 type Employee
-  @modelmutatiui
+  @model
   @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
   id: ID!
   name: String!
@@ -32,4 +32,19 @@ type City
   @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
   id: ID!
   name: String!
+}
+
+type Country
+  @model
+  @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
+  id: ID!
+  name: String!
+}
+
+type Milestone
+  @model
+  @auth(rules: [{ allow: owner, operations: [create, delete, update] }]) {
+  id: ID!
+  name: String!
+  description: String!
 }

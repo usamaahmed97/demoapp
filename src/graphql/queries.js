@@ -139,3 +139,63 @@ export const listCities = /* GraphQL */ `
     }
   }
 `;
+export const getCountry = /* GraphQL */ `
+  query GetCountry($id: ID!) {
+    getCountry(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listCountries = /* GraphQL */ `
+  query ListCountries(
+    $filter: ModelCountryFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCountries(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;
+export const getMilestone = /* GraphQL */ `
+  query GetMilestone($id: ID!) {
+    getMilestone(id: $id) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listMilestones = /* GraphQL */ `
+  query ListMilestones(
+    $filter: ModelMilestoneFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listMilestones(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        description
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;

@@ -202,3 +202,90 @@ export const deleteCity = /* GraphQL */ `
     }
   }
 `;
+export const createCountry = /* GraphQL */ `
+  mutation CreateCountry(
+    $input: CreateCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    createCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const updateCountry = /* GraphQL */ `
+  mutation UpdateCountry(
+    $input: UpdateCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    updateCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const deleteCountry = /* GraphQL */ `
+  mutation DeleteCountry(
+    $input: DeleteCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    deleteCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const createMilestone = /* GraphQL */ `
+  mutation CreateMilestone(
+    $input: CreateMilestoneInput!
+    $condition: ModelMilestoneConditionInput
+  ) {
+    createMilestone(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const updateMilestone = /* GraphQL */ `
+  mutation UpdateMilestone(
+    $input: UpdateMilestoneInput!
+    $condition: ModelMilestoneConditionInput
+  ) {
+    updateMilestone(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const deleteMilestone = /* GraphQL */ `
+  mutation DeleteMilestone(
+    $input: DeleteMilestoneInput!
+    $condition: ModelMilestoneConditionInput
+  ) {
+    deleteMilestone(input: $input, condition: $condition) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;

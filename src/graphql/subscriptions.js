@@ -172,3 +172,78 @@ export const onDeleteCity = /* GraphQL */ `
     }
   }
 `;
+export const onCreateCountry = /* GraphQL */ `
+  subscription OnCreateCountry($filter: ModelSubscriptionCountryFilterInput) {
+    onCreateCountry(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateCountry = /* GraphQL */ `
+  subscription OnUpdateCountry($filter: ModelSubscriptionCountryFilterInput) {
+    onUpdateCountry(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteCountry = /* GraphQL */ `
+  subscription OnDeleteCountry($filter: ModelSubscriptionCountryFilterInput) {
+    onDeleteCountry(filter: $filter) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onCreateMilestone = /* GraphQL */ `
+  subscription OnCreateMilestone(
+    $filter: ModelSubscriptionMilestoneFilterInput
+  ) {
+    onCreateMilestone(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onUpdateMilestone = /* GraphQL */ `
+  subscription OnUpdateMilestone(
+    $filter: ModelSubscriptionMilestoneFilterInput
+  ) {
+    onUpdateMilestone(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const onDeleteMilestone = /* GraphQL */ `
+  subscription OnDeleteMilestone(
+    $filter: ModelSubscriptionMilestoneFilterInput
+  ) {
+    onDeleteMilestone(filter: $filter) {
+      id
+      name
+      description
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
