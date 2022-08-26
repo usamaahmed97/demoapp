@@ -202,3 +202,45 @@ export const deleteCity = /* GraphQL */ `
     }
   }
 `;
+export const createCountry = /* GraphQL */ `
+  mutation CreateCountry(
+    $input: CreateCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    createCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const updateCountry = /* GraphQL */ `
+  mutation UpdateCountry(
+    $input: UpdateCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    updateCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const deleteCountry = /* GraphQL */ `
+  mutation DeleteCountry(
+    $input: DeleteCountryInput!
+    $condition: ModelCountryConditionInput
+  ) {
+    deleteCountry(input: $input, condition: $condition) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;

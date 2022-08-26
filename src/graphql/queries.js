@@ -139,3 +139,32 @@ export const listCities = /* GraphQL */ `
     }
   }
 `;
+export const getCountry = /* GraphQL */ `
+  query GetCountry($id: ID!) {
+    getCountry(id: $id) {
+      id
+      name
+      createdAt
+      updatedAt
+      owner
+    }
+  }
+`;
+export const listCountries = /* GraphQL */ `
+  query ListCountries(
+    $filter: ModelCountryFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCountries(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        createdAt
+        updatedAt
+        owner
+      }
+      nextToken
+    }
+  }
+`;
